@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension
+          point="org.eclipse.ui.commands">
+       <command
+             categoryId="org.eclipse.ui.category.window"
+             id="org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesCommand"
+             name="%Change_Maven_Properties_Cmd">
+       </command>
+    </extension>
+    
+    <extension
+          point="org.eclipse.ui.handlers">
+       <handler
+             class="org.jboss.tools.m2e.properties.ui.internal.actions.PropertiesChangeHandler"
+             commandId="org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesCommand">
+       </handler>
+    </extension>
+   
+   <extension point="org.eclipse.ui.popupMenus">
+        <objectContribution id="org.jboss.tools.m2e.properties.ui.properties.selectFromProject"
+                          objectClass="org.eclipse.core.resources.IProject"
+                          adaptable="true">
+         <action id="org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesAction"
+                 class="org.jboss.tools.m2e.properties.ui.internal.actions.GenericCommandActionDelegate:org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesCommand"
+                 label="%Change_Maven_Properties_Menu"
+                 style="push"
+                 definitionId="org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesCommand"
+                 menubarPath="org.eclipse.m2e.core.mavenMenu/open"
+                 enablesFor="+"/>
+         <visibility>
+           <and>
+             <objectState name="open" value="true"/>
+             <objectState name="nature" value="org.eclipse.m2e.core.maven2Nature"/>
+           </and>
+         </visibility>
+      </objectContribution>
+      
+       <objectContribution id="org.jboss.tools.m2e.properties.ui.properties.selectFromPom"
+                          objectClass="org.eclipse.core.resources.IFile"
+                          adaptable="true">
+         <action id="org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesAction"
+                 class="org.jboss.tools.m2e.properties.ui.internal.actions.GenericCommandActionDelegate:org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesCommand"
+                 label="%Change_Maven_Properties_Menu"
+                 style="push"
+                 definitionId="org.jboss.tools.m2e.properties.ui.commands.changeMavenPropertiesCommand"
+                 menubarPath="org.eclipse.m2e.core.fileMenu/open"
+                 enablesFor="+"/>
+         <visibility>
+            <objectState name="name" value="pom.xml"/>
+         </visibility>
+      </objectContribution>    
+  </extension> 
+
+</plugin>
