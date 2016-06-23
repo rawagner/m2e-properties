@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Maven Properties Manager">
+      Maven Properties Manager
+   </description>
+   <category name="m2e-properties"/>
+   <feature url="features/org.jboss.tools.m2e.properties.feature_0.0.0.qualifier.jar" id="org.jboss.tools.m2e.properties.feature" version="0.0.0">
+      <category name="m2e-properties"/>
+   </feature>
+   <category-def name="m2e-properties" label="Maven Properties Manager"/>
+   <feature url="features/org.jboss.tools.m2e.properties.feature.source_0.0.0.qualifier.jar" id="org.jboss.tools.m2e.properties.feature.source" version="0.0.0">
+      <category name="m2e-properties-sdk"/>
+   </feature>
+   <category-def name="m2e-properties-sdk" label="Maven Properties Manager (SDK)"/>
+</site>

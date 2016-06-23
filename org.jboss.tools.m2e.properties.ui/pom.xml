@@ -4,14 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-	    <groupId>org.eclipse.m2e</groupId>
-	    <artifactId>m2e-core</artifactId>
-	    <version>1.7.0-SNAPSHOT</version>
+	    <groupId>org.jboss.tools.m2e</groupId>
+	    <artifactId>org.jboss.tools.m2e.properties</artifactId>
+	    <version>1.0.0-SNAPSHOT</version>
 	</parent>
-	  
-	<artifactId>org.jboss.tools.m2e.properties.core</artifactId>
-	
+	  	
+	<artifactId>org.jboss.tools.m2e.properties.ui</artifactId>
 	<packaging>eclipse-plugin</packaging>
-	
-	<name>Maven Properties Manager Core</name>
+	<name>Maven Properties Manager UI</name>
+
 </project>

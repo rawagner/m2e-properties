@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 public class MavenPropertiesCoreActivator extends Plugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "org.eclipse.m2e.properties.core"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "org.jboss.tools.m2e.properties.core"; //$NON-NLS-1$
 	
 	// The shared instance
 	private static MavenPropertiesCoreActivator plugin;
